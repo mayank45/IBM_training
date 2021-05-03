@@ -1,0 +1,5 @@
+<button (click)="flag=!flag">Flag: {{flag}}</button>
+<p *ngIf="flag">This is paragraph 1</p>
+<p *unless="flag" [highlight]="'green'">This is paragraph 2</p>
+
+

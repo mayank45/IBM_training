@@ -1,0 +1,14 @@
+li{
+    list-style: none;
+    border: 1px solid blue;
+    /* display: inline; */
+    width: 100px;
+    margin: 10px 0;
+    padding: 10px 15px;
+}
+
+li:hover{
+    background-color: cornflowerblue;
+    color: white;
+    box-shadow: 0 0 10px black;
+}

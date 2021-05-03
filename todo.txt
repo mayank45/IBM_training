@@ -1,0 +1,15 @@
+1. maven with jenkins -> sahana
+
+	Shell
+		export MAVEN_HOME=/opt/maven
+		export PATH=$PATH:$MAVEN_HOME/bin
+		mvn clean compile test package
+	
+	Window batch
+		set MAVEN_HOME=maven-path
+		set PATH=%MAVEN_HOME%\bin;%PATH%
+		mvn clean compile test package
+
+	
+
+2. mvn -> eclipse -> mvn test -> sakshi

@@ -1,0 +1,19 @@
+GET http://localhost:8080/books
+
+###
+
+GET http://localhost:8080/books/title?name=author
+
+###
+
+GET http://localhost:8080/books/title?name=superman
+
+###
+
+POST http://localhost:8080/books
+content-type: application/json
+
+ {
+     "id": 2,
+    "title": "superman"
+  }

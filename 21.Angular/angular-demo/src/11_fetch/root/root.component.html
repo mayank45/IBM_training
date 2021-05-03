@@ -1,0 +1,29 @@
+<div class="container">
+    <div class="row">
+        
+        {{people| slice:0:2|json}}
+
+        <div class="table-responsive">
+            <table class="table table-sm">
+                <tr>
+                    <th>S.No.</th>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Email</th>
+                    <th>Gender</th>
+                    <th>Address</th>
+                </tr>
+                <tr *ngFor="let person of people| slice:10:15;let i = index">
+                    <td>{{i+1}}</td>
+                    <td>{{person.name}}</td>
+                    <td>{{person.age}}</td>
+                    <td>{{person.email}}</td>
+                    <td>{{person.gender}}</td>
+                    <td>{{person.address}}</td>
+                </tr>
+            </table>
+
+
+        </div>
+    </div>
+</div>

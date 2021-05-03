@@ -1,0 +1,22 @@
+<div class="container">
+    <div class="row">
+        <header class="col-sm-12">
+            This is my header
+        </header>
+        <aside class="col-sm-4">
+            This is aside/left bar<br/>
+            <!-- <a href="/home">Home</a> <br/> -->
+            <!-- <a href="/login">Login</a> -->
+            <a [routerLink]="['home']">Home</a> <br/>
+            <a [routerLink]="['login']">Login</a>
+        </aside>
+        <section class="col-sm-8">
+            This is main section
+            <br/>
+            <router-outlet></router-outlet>
+        </section>
+        <footer class="col-sm-12">
+            This is footer
+        </footer>
+    </div>
+</div>

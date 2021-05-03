@@ -1,0 +1,13 @@
+Download java
+	- https://www.oracle.com/in/java/technologies/javase-downloads.html
+	
+Install java
+	- C:\Program Files\Java\jdk1.8.0_212
+	
+Add environment path
+	- add new path - C:\Program Files\Java\jdk1.8.0_212\bin
+	
+Close tabs
+Open CMD
+	- java -version
+	- javac -version

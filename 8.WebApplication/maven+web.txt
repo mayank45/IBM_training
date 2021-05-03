@@ -1,0 +1,38 @@
+0. check -> dynamic web project
+
+1. Create maven project
+2. Select/Add project type
+	groupId: org.apache.maven.archetypes
+	artifactId: maven-archetype-webapp
+	version: 1.4
+	
+3. provide project name and groupid
+4. src/main/java
+	create java directory if not created by maven
+5. create html page in webapp directory
+	login.html
+	<form action="server location to handle login" method="post">
+	  <div>
+	    <label>Email address</label>
+	    <input type="email" placeholder="Enter email" name="user">
+	  </div>
+	  <div class="form-group">
+	    <label >Password</label>
+	    <input type="password" placeholder="Password" name="password">
+	  </div>
+	  <button>Submit</button>
+	</form>
+6. Create servlet
+	give mapping
+	/login -> action -> localhost:8080/application_name/login
+	so that request can reach to the servlet
+	
+	doGet
+	doPost
+7. Add server or servlet-api-3.1.0 so that compilation errors will be gone
+8. Add tomcat
+	window -> show views -> servers
+	right click on white area -> server type -> apache tomcat -> browse to the path where tomcat is saved (without bin) -> finish
+9. Right click on the project -> run on server	
+
+	

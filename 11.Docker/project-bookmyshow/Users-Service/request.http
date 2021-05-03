@@ -1,0 +1,8 @@
+POST http://localhost:8085/users/add
+content-type: application/json
+
+{
+    "id":1254,
+	"name":"demo",
+	"lastname":"again"
+}

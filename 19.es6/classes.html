@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+// var Person = function(n, a){
+//     this.n = n;
+//     this.a = a;
+
+//     show = function(){
+//         console.log("Name is "+this.n);
+//         console.log("Age is "+this.a);
+//     }
+// }
+// console.log(new Person('arun', 35))
+
+
+        class Calculator{
+            add(a,b){
+                return a+b;
+            }
+            mul(a,b){
+                return a*b;
+            }
+            sub(a,b){
+                return a-b;
+            }
+            div(a,b){
+                return a/b;
+            }
+        }
+
+        class ScCalculator extends Calculator{
+            square(a){
+                return a*a;
+            }
+            sqRoot(a){
+                return Math.pow(a, 0.5);
+            }
+        }
+
+        var myCal = new ScCalculator();
+        console.log("Square root of 25 is "+myCal.sqRoot(25))
+        console.log("Addition of 5 and 7 is "+myCal.add(5, 7))
+    </script>
+</body>
+</html>

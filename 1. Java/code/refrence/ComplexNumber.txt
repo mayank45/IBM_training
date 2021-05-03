@@ -1,0 +1,56 @@
+Complex number
+	Object
+		realNum
+		imgNum
+		
+		realNum + imgNum*i
+		
+
+class ComplexNumber {
+
+	int realNum;
+	int imgNum;
+	
+	void show(){
+		System.out.println(realNum + "+" + imgNum + "i");
+	}
+	
+	void add(ComplexNumber o1, ComplexNumber o2){
+		System.out.println((o1.realNum + o2.realNum) + "+" + (o1.imgNum + o2.imgNum) + "i");
+	}
+
+	ComplexNumber add(ComplexNumber o1, ComplexNumber o2){
+		ComplexNumber sum = new ComplexNumber();
+
+		sum.realNum = o1.realNum + o2.realNum;
+		sum.imgNum = o1.imgNum + o2.imgNum;
+		
+		return sum;
+	}
+
+}
+
+class TestComplexNumber{
+
+	main(){
+		ComplexNumber cn1 = new ComplexNumber();
+		cn1.realNum = 2;
+		cn1.imgNum = 5;
+		cn1.show(); // 2+5i
+		ComplexNumber cn2 = new ComplexNumber();
+		cn2.realNum = 4;
+		cn2.imgNum = 3;
+		cn2.show(); // 4+3i
+/*	
+	ComplexNumber cn3 = new ComplexNumber();
+		cn3.realNum = cn1.realNum + cn2.realNum;
+		cn3.imgNum = cn1.imgNum + cn2.imgNum;
+	*/
+	
+	cn1.add(cn1, cn2);	
+	
+ComplexNumber sum = cn1.add(cn1, cn2);	
+sum.show();
+	}
+
+}

@@ -1,0 +1,50 @@
+1. Download DockerDesktop
+	https://hub.docker.com/editions/community/docker-ce-desktop-windows/
+2. Install docker (requirements)
+3. Open cmd/terminal
+	docker -v
+	docker info
+	
+4. Important commands
+	docker images			will show all local machine images 
+	docker pull image:tag		will download image
+	docker run image:tag		will run image into container
+					pull if not found in local machine
+					:tag is latest by default
+					
+		-p hostPort:guestPort
+		--rm			remove this container when stopped
+		-it			interactive mode
+		--name 			myTomcat1
+		
+	docker ps			will show all running containers
+	docker ps -a			will show all containers (stopped, running, paused)
+	docker rmi imageName:tag	remove image
+	docker rmi imageId		remove image
+	docker stop containerId		will stop container gracefully
+	docker kill containerId		will stop container forcefully
+	docker rm containerid		will remove container
+	
+	docker build --- to create image
+	docker exec ---- to open terminal
+		$ docker exec -it containerId bash
+	docker push --- to push image to docker hub
+	
+		
+5. Create image
+	User tomcat
+	Save war file from given location to /usr/local/tomcat/webapps within container
+	Start tomcat->8080
+	
+	Create a file named as Dockerfile
+		FROM tomcat:8.5
+		COPY ./Java_14_webdemo.war /usr/local/tomcat/webapps/Java_14_webdemo.war
+		
+		EXPOSE 8080
+		CMD ["catalina.sh", "run"]
+	
+	
+	open cmd and go to the location where Dockerfile is available
+		$ docker build -t mytomcat:demo .
+	
+	

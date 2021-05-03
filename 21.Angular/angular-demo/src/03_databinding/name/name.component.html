@@ -1,0 +1,13 @@
+<input type="text" #name /> Welcome {{name.value}}
+
+<hr/>
+
+<input type="text" #name2 (keyup)="updateNameVar2(name2.value)" /> Welcome {{nameVar2}}
+
+<hr/>
+
+<input type="text" [(ngModel)]="nameVar3" /> Welcome {{nameVar3}}
+
+<hr/>
+
+<button (click)="setDefault()">Default</button>

@@ -1,0 +1,9 @@
+1. Go to start.spring.io
+	Spring Initializr
+2. Edit groupId, artifactId and change java version
+3. Add required dependencies
+	SpringWeb - REST
+	Devtools
+4. Start
+	@SpringBootApplication
+		SpringApplication.run

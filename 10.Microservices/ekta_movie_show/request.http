@@ -1,0 +1,15 @@
+GET http://localhost:9595/movies
+
+###
+
+POST http://localhost:9595/movies
+content-type: application/json
+
+{
+	"id": 3,
+    "title": "Movie_1",
+	"release_date": "Jan2017",
+	"rating":3
+}
+###
+GET http://localhost:9595/movies/by?title=Movie_22&rating=&release

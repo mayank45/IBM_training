@@ -1,0 +1,16 @@
+create a directory for dummy server
+    $ cd json-server-demo
+
+Initialize current directory as npm project
+    $ npm init -y
+
+    $ npm i --save-dev json-server
+    or
+    $ npm i json-server --save-dev
+    
+Package.json
+    "scripts": {
+        "start": "json-server --watch my.json"
+    }
+
+create file my.json in current location

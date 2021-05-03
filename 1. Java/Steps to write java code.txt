@@ -1,0 +1,25 @@
+Java
+	file - fileName.java
+	class  - method
+	compile - javac
+	run - java
+	output
+
+
+-------------
+filename - Demo.java
+	create class - TryJava
+	create main method
+	
+	compile - javac filename.java
+	Byte Code generated
+		classes
+	run/start - java ClassName 
+		containing main method
+			 public static void main(String[] args)
+			 
+	ClassName == FileName 
+	Class must be public
+	One file must have one class
+	
+	

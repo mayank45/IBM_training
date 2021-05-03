@@ -1,0 +1,40 @@
+Create an Html page
+    add react and react-dom libraries
+
+    class having parent as React.Component
+        render(){
+            return (
+                js -> pure react 
+            )
+        }
+
+    ReactDOM.render(
+        pure react(class),
+        element
+    )
+
+-----------------
+For jsx
+
+Create an Html page
+    add react and react-dom libraries
+    add babel library
+
+<script type="text/babel">
+    class having parent as React.Component
+        render(){
+            return (
+                jsx
+            )
+        }
+
+    ReactDOM.render(
+        <ClassName/>,
+        element
+    )
+
+
+
+https://reactjs.org/docs/create-a-new-react-app.html
+Create react application
+    $ npx create-react-app my-app

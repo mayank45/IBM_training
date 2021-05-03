@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        class Person{
+
+            constructor(n, a, ad){
+                this.name = n;
+                this.age = a;
+                this.address = ad;
+            }
+
+            toString(){
+                // return "Name is "+this.name+" , Age is "+this.age+" , Address is "+this.address;
+                return `Name is ${this.name}, Age is ${this.age}, Address is ${this.address}`;
+            }        
+        }
+
+
+        var arun = new Person("arun", 35, "delhi");
+        console.log(arun.toString())
+
+    </script>
+</body>
+</html>

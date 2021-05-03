@@ -1,0 +1,7 @@
+<h1>Welcome to my app</h1>
+
+<div *ngFor="let image of images;let i=index;">
+    <app-my-image [path]="image" [radius]="i"></app-my-image>
+    <app-my-anchor [radius]="i"></app-my-anchor>
+    <p>some dummy text</p>
+</div>

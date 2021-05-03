@@ -1,0 +1,44 @@
+Open new perspective view -> Git view
+	show view -> Git repository
+Create eclipse project
+Right click -> team -> share -> initialize current project as git project
+
+cmd -> add remote, default branch 'master'
+
+work in the project
+right click on file(s)
+add file(s) to staging area
+commit or commit and push
+
+Add Jenkinsfile at root of the project
+=> use pipeline syntax (code) here
+
+pipeline {
+    agent any
+    stages {
+        stage('Compile') {
+            steps{
+                sh 'depends'
+            }
+        }
+    }
+    post {
+        failure {
+            mail bcc: '', body: "$BUILD_NUMBER", subject: "$JOB_NAME", to: 'java.kumar.arun@gmail.com'
+        }
+        success {
+            mail bcc: '', body: "$BUILD_NUMBER", subject: "$JOB_NAME", to: 'java.kumar.arun@gmail.com'
+        }      
+    }
+}
+
+
+
+
+
+================================
+
+Create Pipeline type project
+select pipeline from SCM
+	git url
+	

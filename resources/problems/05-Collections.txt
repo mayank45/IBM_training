@@ -1,0 +1,48 @@
+1. Rotation
+
+An array A consisting of N integers. Rotation of the array means that each element is shifted right by one index, and the last element of the array is moved to the first place. 
+For example, the rotation of array A = [1,2,3,4,5] is [5,1,2,3,4] (elements are shifted right by one index and 5 is moved to the first place)
+
+
+The goal is to rotate array A K times; that is, each element of A will be shifted to the right K times.
+
+	public int[] rotate(int[] A, int K){
+		// ...
+	}
+
+	A = [1,2,3,4,5]
+	K = 2;
+	
+	rotate(A, K)-> [5,1,2,3,4] -> 1
+	rotate(A, K)-> [4,5,1,2,3] -> 2
+
+
+
+
+2. Occurrences In Array
+
+A non-empty array A consisting of N integers. The array contains an odd number of elements, and each element of the array can be paired with another element that has the same value, except for one element that is left unpaired.
+
+A = [2,1,2,1,2,6,2]
+
+For example, in array A such that:
+A[0] = 2 
+A[1] = 1 
+A[2] = 2
+A[3] = 1 
+A[4] = 2 
+A[5] = 6
+A[6] = 2
+
+the elements at indexes 0 and 2 have value 2 - paired,
+the elements at indexes 1 and 3 have value 1 - paired,
+the elements at indexes 4 and 6 have value 2 - paired,
+the element at index 5 has value 6 and is unpaired.
+
+Write a function taking A array as argument and returning 6, as explained in the example above
+	public int findUnpaired(int[] A){
+		//...
+	}
+
+A = [1,5,9,5] -> invalid input
+A = [1,8,1,8] -> invalid input

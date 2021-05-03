@@ -1,0 +1,17 @@
+<h2>
+    {{head}}
+</h2>
+
+<input type="number" #fn />
+<select (change)="update(select.value)" #select>
+    <option>+</option>
+    <option>-</option>
+    <option>/</option>
+    <option>*</option>
+</select>
+<input type="number" #sn />
+
+<button (click)="calculate(+fn.value, +sn.value)">GO</button>
+
+<br/>
+<h1>{{result}}</h1>

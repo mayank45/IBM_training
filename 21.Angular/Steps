@@ -1,0 +1,71 @@
+1. Install nodejs (npm)
+    https://nodejs.org/en/
+
+    Check 
+    npm -v
+2. Install @ancular/cli - https://angular.io/guide/setup-local
+    npm install -g @angular/cli
+3. Create project
+    ng new my-project-name
+        type checking- N
+        routing - N
+        Use CSs
+
+4. cd my-project-demo
+5. npm start
+    localhost:4200
+
+6. src -> app -> app.component.html
+    updated
+
+
+---------------------------------------
+
+Once project is created
+1. src/main.ts
+2. platformBrowserDynamic().bootstrapModule(AppModule)
+3. create module
+    @NgModule({
+        declarations: [AppComponent],
+        imports:[
+            BrowserModule
+        ],
+        bootstrap: [AppComponent]
+    })
+    class AppModule{}
+
+4. AppComponent
+    @Component({
+        selector: "my-first-component",
+        template: `<h1>It is my very first angular component</h1>`,
+        styles: []
+    })
+    class AppComponent{
+        constructor(){
+            console.log("my first component is rendered")
+        }
+    }
+5. index.html 
+    consume component's selector name as custom tag
+    <my-first-component></my-first-component>
+
+6. Start app
+    npm start
+    npm run start
+    ng serve
+
+    localhost:4200
+    
+    
+    
+--------------------------
+
+Angular + bootstrap
+
+$ go to location-> package.json
+$ npm i bootstrap
+
+node_modules/bootstrap/dist/css/bootstrap.css
+	append it in angular.json -> styles []
+	
+	

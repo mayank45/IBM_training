@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio Player</title>
+</head>
+<body>
+    <audio id="audio_player" autoplay>
+        <source src="mp3/Aa leke tujhe.mp3" type="audio/mp3"/>
+        This browser does not support audio feature.
+    </audio>
+    <div id="audio_controls">
+        <button onclick="playAudio()">Play</button>
+        <button onclick="pauseAudio()">Pause</button>
+        <button onclick="stopAudio()">Stop</button>
+        <button onclick="increaseVolume()">Volume Up</button>
+        <button onclick="decreaseVolume()">Volume Down</button>
+        <button onclick="mute()">Mute</button>
+    </div>
+    <div>
+        <img id="poster" src="images/Aa leke tujhe.jpg" width="300" height="150" />
+    </div>
+    <div>
+        <table>
+            <tr>
+                <td>Aa leke tujhe</td>
+                <td><img src="images/Aa leke tujhe.jpg" width="50" /></td>
+                <td><button onclick="change('Aa leke tujhe')">Play</button></td>
+                <!-- <td><img src="https://picsum.photos/id/237/200/300" width="50" /></td> -->
+            </tr>
+            <tr onclick="change('Chal Mere Ghode')">
+                <td>Chal Mere Ghode</td>
+                <td><img src="images/Chal Mere Ghode.jpg" width="50" /></td>
+            </tr>
+            <tr onclick="change('Chanda Hai Tu')">
+                <td>Chanda Hai Tu</td>
+                <td><img src="images/Chanda Hai Tu.jpg" width="50" /></td>
+            </tr>
+        </table>
+    </div>
+
+    <script>
+var audioPlayer = document.getElementById('audio_player');
+        function change(name){
+            console.log(name);
+            document.getElementById('poster').src = "images/"+name+".jpg";
+            audioPlayer.src = "mp3/"+name+".mp3";
+        }
+
+        function playAudio(){
+            console.log("play audio");
+            audioPlayer.play();
+        }
+        function pauseAudio(){
+            console.log("pause audio");
+            audioPlayer.pause();
+        }
+        function stopAudio(){
+            console.log("stop audio");
+            console.log(audioPlayer.currentTime);
+            audioPlayer.pause();
+            audioPlayer.currentTime = 0;
+        }
+        function increaseVolume(){
+            console.log("inc vol");
+            console.log(audioPlayer.volume);
+            audioPlayer.volume = audioPlayer.volume + 0.1;
+        }
+        function decreaseVolume(){
+            console.log("dec vol")
+            audioPlayer.volume = audioPlayer.volume - 0.1;
+        }
+        function mute(){
+            audioPlayer.volume = 0
+        }
+
+
+
+    </script>
+</body>
+</html>

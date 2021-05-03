@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <input type="text" placeholder="Enter your name" onkeyup="readName()" />
+        <span></span>
+        <br/>
+        <input type="text" placeholder="Enter your age" onkeyup="readAge()" />
+        <span></span>
+        <br/>
+        <button type="submit">Submit</button>
+    </form>
+
+    <hr/>
+
+    <div>
+        <input type="text" placeholder="Enter num1" /><br/>
+        <input type="text" placeholder="Enter num2" /><br/>
+        <button onclick="add()">Add</button>
+        <button>Sub</button>
+    </div>
+
+
+    <script>
+        var inputs = document.getElementsByTagName('input');
+        var spans = document.getElementsByTagName('span');
+        console.log(inputs.length);
+
+        function readName(){
+            var nameEle = inputs[0];
+            console.log(nameEle.value);
+            spans[0].innerText = nameEle.value;
+        }
+
+        function readAge(){
+            var ageEle = inputs[1];
+            console.log(ageEle.value);
+            console.log(typeof ageEle.value);
+            spans[1].innerText = ageEle.value;
+        }
+
+        function add(){
+            var fn = +inputs[2].value;
+            var sn = +inputs[3].value;
+
+            console.log(fn+sn);
+        }
+    </script>
+
+</body>
+</html>

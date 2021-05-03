@@ -1,0 +1,27 @@
+<div>
+    <ng-content></ng-content>
+    <!-- {{persons|json}} -->
+
+    <table width="100%">
+        <thead>
+            <tr>
+                <th>S.No.</th>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Email</th>
+                <th>Gender</th>
+                <th>Address</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let person of persons;let i=index">
+                <td>{{i+1}}</td>
+                <td>{{person.name}}</td>
+                <td>{{person.age}}</td>
+                <td>{{person.email}}</td>
+                <td>{{person.gender}}</td>
+                <td>{{person.address}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

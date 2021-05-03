@@ -1,0 +1,58 @@
+# Write an application: OnlineShopping
+
+1. User must register - save data(user) - Map<String, User>
+	email*
+		valid email
+	password*
+		must be 5, 13 characters
+		must contain atleast one special character
+	name
+		must not contain numbers
+	gender
+		MALE/FEMALE
+	address
+		min characters - 10
+		
+2. Only registered users can login.
+3. Once login is success, user will see below details
+
+	Item: Mobile
+	Price: 45999.9
+	Company: OnePlus
+		
+	Item: Laptop
+	Price: 95999.9
+	Company: HCL
+	
+	Press 1 to buy mobile, press 2 to buy laptop, press 3 to buy both, press 0 to exit
+	
+4. If items added in the cart, show invoice
+	
+	Item: Mobile
+	Price: 45999.9
+	Company: OnePlus
+	GST: 18%
+		
+	Item: Laptop
+	Price: 95999.9
+	Company: HCL
+	GST: 18%
+
+
+	Total: 00000
+	
+	Press: Press 1 to continue, Press 0 to exit
+	
+5. Thank you for purchase. You will get your order in next few days.
+	
+=========================	
+
+Map<String, User> users = new HashMap<String, User>();
+
+register(){
+users.put();
+}
+
+login(){
+User user = users.get("email");
+}

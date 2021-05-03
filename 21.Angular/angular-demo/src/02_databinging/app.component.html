@@ -1,0 +1,17 @@
+<h2>
+    {{head}}
+</h2>
+
+<input type="number" [(ngModel)]="fn" />
+<select (change)="update(select.value)" #select>
+    <option>+</option>
+    <option>-</option>
+    <option>/</option>
+    <option>*</option>
+</select>
+<input type="number" [(ngModel)]="sn" />
+
+<button (click)="calculate()">GO</button>
+
+<br/>
+<h1>{{result}}</h1>

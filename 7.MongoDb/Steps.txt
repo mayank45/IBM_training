@@ -1,0 +1,25 @@
+1. Download and Install mongodb
+	https://www.mongodb.com/try/download/community
+
+2. Append in path variable C:\Program Files\MongoDB\Server\4.4\bin
+	commands
+		mongo
+		mongod
+
+3. Start (ip: localhost, port: 27017)
+	if installed as service
+		run -> services.msc -> mongodb -> start
+		
+	not as a service (open cmd or shell)
+		$ mongod
+			by default -> Data directory C:/data/db
+		$ mongod --dbpath path
+		$ mongod --dbpath D:\Training\IBM-21\7.MongoDb\data
+		
+		-> go to the location/path
+		$ mongod --dbpath .
+		
+4. Connect, open other cmd/shell
+	$ mongo
+		
+		

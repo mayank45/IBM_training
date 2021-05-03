@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validatioin form</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</head>
+
+
+<body>
+    <div class="container">
+        <h1 class="text-primary text center d-block">Validation form</h1>
+        <div class="col-lg-8 m-auto d-block">
+            <form action="#" onsubmit="validation();">
+                <div class="form-group">
+                    <label>Username: </label>
+                    <input type="text" name="user" class="form-control" id="user">
+                    <span id="username" class="text-danger font-weight-bold"></span>
+                </div>
+                <div class="form-group">
+                    <label>Password: </label>
+                    <input type="password" name="password" class="form-control" id="pass">
+                    <span id="password" class="text-danger font-weight-bold"></span>
+                </div>
+                <div class="form-group">
+                    <label>Confirm password: </label>
+                    <input type="password" name="cf" class="form-control" id="cp">
+                    <span id="confirmpass" class="text-danger font-weight-bold"></span>
+                </div>
+                <div class="form-group">
+                    <label>Mobile number: </label>
+                    <input type="number" name="Mobile" class="form-control" id="mobile">
+                    <span id="mobileno" class="text-danger font-weight-bold"></span>
+                </div>
+                <div class="form-group">
+                    <label>Email: </label>
+                    <input type="email" name="user" class="form-control" id="email">
+                    <span id="emailid" class="text-danger font-weight-bold"></span>
+                </div>
+                <input type="submit" name="submit" value="Submit" class="btn btn-success">
+            </form>
+        </div>
+    </div>
+    <script type="text/javascript">
+        function validation() {
+            isValid = true;
+            var user = document.getElementById('user').value;
+            var pass = document.getElementById('pass').value;
+            var confirmPass = document.getElementById('cp').value;
+            var mobileNum = document.getElementById('mobile').value;
+            var emailId = document.getElementById('email').value;
+
+            function validateEmptyField(id, field){
+                document.getElementById(id).innerHTML = "*please fill the "+field+" field";
+            }
+
+            if (user == "") {
+                validateEmptyField("username", "user-name");
+                isValid = false;
+            } else if ((user.length <= 2) || (user.length > 20)) {
+                document.getElementById('username').innerHTML = "*Name lenght must be greater then 2 and less then 20";
+            } else if (!isNaN(user)) {
+                document.getElementById('username').innerHTML = "*Name must not content number";
+            } else {
+                document.getElementById('username').innerHTML = "";
+            }
+
+
+
+
+            if (pass == "") {
+                return validateEmptyField("password");
+            }
+            if ((user.length <= 5) || (user.length > 20)) {
+                document.getElementById('password').innerHTML = "*Paaword lenght must be greater then 5 and less then 20";
+            }
+
+
+
+            if (confirmPass == "") {
+                document.getElementById('confirmpass').innerHTML = "*please fill the confirm password field";
+            }
+            if (pass !== confirmPass) {
+                document.getElementById('confirmpass').innerHTML = "*Paaword are not same";
+            }
+
+
+            if (mobileNum == "") {
+                return validateEmptyField("mobileno");
+            }
+            if (isNaN(mobileNum)) {
+                document.getElementById('mobileno').innerHTML = "*Charaxters not allowed here";
+            }
+            if (mobileNum.length != 10) {
+                document.getElementById('mobileno').innerHTML = "*Mobile number must be 10 digit only";
+            }
+
+            if (emailId == "") {
+                document.getElementById('emailid').innerHTML = "*please fill the email field";
+            }
+            if (emailId.indexOf('@') <= 0) {
+                document.getElementById('emailid').innerHTML = "*Invalid of @ position";
+            }
+            if ((emailId.charAt(emailId.length - 4) != '.') && (emailId.charAt(emailId.length - 3) != '.')){
+                document.getElementById('emailid').innerHTML = "*Invalid email id(check value after .)";
+            }
+
+            return false;
+        }
+    </script>
+</body>
+
+</html>

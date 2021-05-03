@@ -1,0 +1,80 @@
+1. Create maven project (uncheck -> simple project)
+	maven-archetype-webapp
+	
+2. open pom.xml
+	add servlet-api in pom.xml
+	and add spring-mvc dependency
+
+	<dependency>
+	    <groupId>org.springframework</groupId>
+	    <artifactId>spring-webmvc</artifactId>
+	    <version>5.3.0</version>
+	</dependency>
+
+3. Create FrontController -> DispatcherServlet (in web.xml)
+	/rest/*
+	
+	<?xml version="1.0" encoding="UTF-8"?>
+	<web-app version="2.5" xmlns="http://java.sun.com/xml/ns/javaee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+	  <display-name>Archetype Created Web Application</display-name>
+	  <servlet>
+	  	<servlet-name>dispatcher</servlet-name>
+	  	<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+	  </servlet>
+	  <servlet-mapping>
+	  	<servlet-name>dispatcher</servlet-name>
+	  	<url-pattern>/rest/*</url-pattern>
+	  </servlet-mapping>
+	</web-app>
+
+	
+4. Create xml file named as (in webapp/WEB-INF/)
+	"servlet-name"-servlet.xml == dispatcher-servlet.xml
+	
+	<?xml version="1.0" encoding="UTF-8"?>
+		<beans xmlns="http://www.springframework.org/schema/beans"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xmlns:mvc="http://www.springframework.org/schema/mvc"
+		xmlns:context="http://www.springframework.org/schema/context"
+		xsi:schemaLocation="
+		http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+		
+		<!-- Scans within the base package of the application for @Components to configure as beans -->
+		<!-- @Controller, @Service, @Configuration, etc. -->
+		<context:component-scan base-package="com.demo.controllers" />
+		
+		<!-- Enables the Spring MVC @Controller programming model -->
+		<mvc:annotation-driven />
+	</beans>
+	
+5. Create class -> com.demo.controllers
+
+// localhost:8080/application_name/rest---controller
+					/user
+						/greet
+						/login
+	// @Controller -> mvc
+	@RestController
+	@RequestMapping("user")
+	class UserController{
+	
+//		@RequestMapping("greet")
+		@GetMapping("greet")
+		public String greet(){
+			return "Welcome User";
+		}
+	
+//		@RequestMapping(value="login", method=RequestMethod.POST)
+		@PostMapping("login")
+		public void handleLogin(){}
+		
+		public void handleSignup(){}		
+	
+	}
+
+6. Run on server
+	// localhost:8080/app/rest/greet

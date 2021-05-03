@@ -1,0 +1,17 @@
+Calculator
+	should add 2 numbers 
+	should add 2 negative numbers 
+	should add 3 numbers 
+	should mul numbers
+	should div number
+	should not div by zero
+	
+	
+	
+// how to add downloaded jar
+1. create a directory (lib) in the project
+2. save jar in the directory (lib)
+3. properties -> build path -> library -> add jar
+
+// hamcrest
+

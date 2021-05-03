@@ -1,0 +1,69 @@
+Download & Install git
+	Select bash terminal
+Git -> GitHub
+	configure git with github account
+	git config --global user.email "your email id"
+	git config --global user.name "your name"
+	
+	
+Create local repository -> upload
+Create server repository -> download -> clone
+
+
+Create local repository
+	git init
+
+To show the status (staging area)
+	git status
+
+To add in staging area
+	git add filename.ext
+	git add .
+	
+	git reset filename.ext
+	git reset .
+	
+To commit
+	git commit -m "message"
+
+One time activity, where to upload
+	git remote add origin https://github.com/java2786/IBMDemo.git
+
+To upload
+	git push -u origin master
+	
+To downlad updated code
+	git pull
+	
+	
+
+To show all commits
+	git log
+To swith to previous commit
+	git checkout commitNumber
+	
+Create a branch
+	git branch name
+
+Push a branch
+	git push -u origin UI
+
+Swith to a branch named as "other"
+	git checkout other
+	
+
+--------------
+
+
+git clone repo_url
+To get update
+	git pull
+	
+	
+-------------------
+
+pull from branch
+
+	git checkout branchName
+	git pull <gitreponame> <branchname>
+	git pull origin branchName

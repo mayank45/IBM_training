@@ -1,0 +1,22 @@
+Create new angular project using ng
+    $ ng new proj-name
+
+open file
+    app.component.spec.ts
+        clear 
+        jasmine code
+            https://jasmine.github.io/tutorials/your_first_suite
+
+            describe(string, function({
+                describe
+                    it
+
+                it
+                    expect(result).toBe(expected_value);
+            }))
+
+
+Run test cases
+    $ npm test 
+    $ npm run test 
+        $ ng test

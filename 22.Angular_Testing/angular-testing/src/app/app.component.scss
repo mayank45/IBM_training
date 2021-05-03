@@ -1,0 +1,20 @@
+div.container{
+    div{
+        width: 400px;
+        margin: 50px auto;
+        h5{
+            text-align: center;
+        }
+        input{
+            border: 5px solid black;
+        }
+
+        input#fn{
+            background-color: red;
+        }
+        input#sn{
+            background-color: blue;
+        }
+    }
+    border: 1px solid green;
+}

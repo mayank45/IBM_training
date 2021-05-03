@@ -1,0 +1,8 @@
+java extension pack
+language support for java
+maven for java
+project manager for java
+spring initializr java
+
+
+mvn spring-boot:run

@@ -1,0 +1,78 @@
+GET http://localhost:8585/books/4 
+
+###
+
+GET http://localhost:8585/books 
+
+###
+
+POST http://localhost:8585/books 
+content-type: application/json
+
+{
+    "title":"Java in 21 days",
+    "author":"Miley",
+    "price":99.9,
+    "publisher":"John publisher",
+    "publishedDate":"1999-04-25",
+    "sn":654
+}
+
+
+### 
+POST http://localhost:8585/books 
+content-type: application/json
+
+{
+    "title":"Html with css",
+    "author":"Mark",
+    "price":9.9,
+    "publisher":"ChandraPublisher",
+    "publishedDate":"2005-12-01",
+    "sn":125
+}
+
+
+### 
+POST http://localhost:8585/books 
+content-type: application/json
+
+{
+    "title":"MEAN stack",
+    "author":"Tom carl",
+    "price":199.2,
+    "publisher":"Mac",
+    "publishedDate":"2018-08-15",
+    "sn":214
+}
+
+
+### 
+
+POST http://localhost:8585/books 
+content-type: application/json
+
+{
+    "title":"some book",
+    "author":"some author",
+    "price": 56.55,
+    "type": "paperback"
+}
+
+### 
+
+PUT http://localhost:8585/books/4 
+content-type: application/json
+
+{
+    "sn": 698,
+    "publishedDate": "2014-10-10"
+}
+
+### 
+
+DELETE http://localhost:8585/books/4 
+
+
+
+

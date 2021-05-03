@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.1/jquery.js"></script>
+</head>
+<body>
+
+    <div id="id"></div>
+    
+    <script>
+        console.log(jQuery);
+        console.log($);
+        console.log(jQuery === $);
+
+
+        // setter
+// document.getElementById('id').innerText = "updated text";
+$('#id').text("updated text");
+
+// getter
+// document.getElementById('id').innerText;
+// alert($('#id').text())
+
+// event
+// document.getElementById('id').addEventListener('click', function(){..})
+$('#id').click(function(){
+    alert($('#id').text())
+})
+
+// animation
+$('#id').hide(5000, function(){
+    $('#id').show(5000) 
+}) 
+// $('#id').fade(5000) 
+// $('#id').slide(5000) 
+// $('#id').toggle(5000)
+
+
+
+    </script>
+</body>
+</html>

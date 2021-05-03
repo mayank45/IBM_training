@@ -1,0 +1,6 @@
+----Min 0 and Max 10----<br/>
+<button (click)="decrease()">-</button>
+{{num}}
+<input min="0" max="10" type="number" [value]="num" (change)="change(counter.value)" #counter />
+<input min="0" max="10" type="number" [(ngModel)]="num" />
+<button (click)="increase()">+</button>

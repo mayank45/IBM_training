@@ -1,0 +1,18 @@
+<div class="border">
+
+    <div class="container">
+        <p class="text-center">root component</p>
+        <input #name (keyup)="0"/>
+        <button class="btn btn-primary" (click)="doPush(name.value);name.value=''">Push</button>
+        <button class="btn btn-warning" (click)="doPop()">Pop</button>
+        <p>{{names|json}}</p>
+        <div class="row">
+            <div class="col-sm-6">
+                <app-comp-a [names]="names"></app-comp-a>
+            </div>
+            <div class="col-sm-6">
+                <app-comp-b [names]="names"></app-comp-b>
+            </div>
+        </div>
+    </div>
+</div>

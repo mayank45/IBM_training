@@ -1,0 +1,40 @@
+CRUD - SpringBoot - Database
+---------------------------------
+1. Start.spring.io
+	web
+	devtools
+	
+	data-mongodb
+	
+	------------------
+	
+		data-jpa
+		mysql
+		h2 - in memory
+		
+	
+2. application.properties	
+		spring.data.mongodb.database=school
+		server.port=8085
+		
+3. Bean -> @Entity -> not required (this annotation will try to create table with same name as class name)
+	Book
+	Item
+	Person
+	Employee
+	
+4. BookController
+	@Autowired
+	BookService bookService;
+
+5. BookService
+	@Autowired
+	BookRepository bookRepository;
+	
+6. BookRepository (interface) extends MongoRepository<Entity, Primary key type>
+	findById -> returns Optional<Entity>
+	findAll
+	save
+	delete
+	
+	

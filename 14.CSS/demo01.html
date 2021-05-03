@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS demo</title>
+    <style>
+        h1{
+            background-color: black;
+            color: white;
+            text-align: center;
+        }
+        h1+p{
+            font-weight: bold;
+        }
+        p{
+            color: blue;
+        }
+        div > p,div > h6{
+            background-color: yellow;
+        }
+        div p{
+            text-decoration: underline;
+        }
+
+        ol > li{
+            /* list-style: url("https://p1.hiclipart.com/preview/729/604/874/world-flag-icons-flag-of-india.jpg"); */
+            list-style: lower-alpha;
+        }
+
+        img{
+            border: 2px solid black;
+            border-radius: 25px;
+        }
+    </style>
+</head>
+<body>
+    <h1>My Page</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis praesentium tenetur dolorum facilis, assumenda possimus commodi quis neque, odio doloremque libero aperiam voluptatem magni ut sed? Voluptatem eaque voluptas doloribus.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto, unde itaque porro minima consequatur molestias earum tempora, est suscipit illum omnis fugit ducimus doloribus nesciunt? Distinctio laudantium dolorem molestiae eum!</p>
+
+    <div>
+        <h6>Demo image</h6>
+        <span>
+            <img src="https://picsum.photos/200/300" />
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem cumque magnam laboriosam perspiciatis architecto, quas at ipsum necessitatibus iure aliquid quibusdam, repellendus sequi nemo nobis, blanditiis sed illo dolorum dolor.</p>
+        </span>
+    </div>
+
+    <div>
+        <h6>Hobbies</h6>
+        <ol>
+            <li>Reading</li>
+            <li>Playing</li>
+            <li>Sleeping</li>
+            <li>Eating</li>
+        </ol>
+    </div>
+</body>
+</html>

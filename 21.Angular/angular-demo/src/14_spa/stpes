@@ -1,0 +1,15 @@
+const routes:Routes = [{
+    path: 'login', component: LoginComponent,
+    path: 'home', component: HomeComponent
+}]
+
+RouterModule.forRoot(routes)
+
+localhost:4200/login
+localhost:4200/home
+
+<router-outlet></router-outlet>
+
+
+<a [routerLink]="['home']">Home</a> <br/>
+<a [routerLink]="['login']">Login</a>

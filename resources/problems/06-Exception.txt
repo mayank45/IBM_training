@@ -1,0 +1,31 @@
+1. Write an application to apply for license. User must give his/her detials
+	User
+		name
+		age
+		nationality
+		education
+
+To accept application
+	age => 18
+	nationalilty == "indian"
+	education => matric
+	
+Failure conditions:
+	MinorAgeException()
+	InvalidCountryException()
+	
+	
+multiple layers -> classes
+
+
+
+2. Convert login code to signup.
+	User
+		name
+		age
+		address
+		email *
+			must be a valid email
+		phone
+		password *
+			must have atleast 5 chars and atmost 12 chars

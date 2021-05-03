@@ -1,0 +1,22 @@
+<div>
+    <div>
+        Template variable<br />
+        <input #n (keyup)="0" /> Welcome {{n.value}}
+    </div>
+    <div>
+        Event binding<br />
+        <input #m (keyup)="readDataFromTemplate(m.value)" /> Welcome {{m.value}}
+    </div>
+    <div>
+        Property binding<br />
+        <input [value]="a" /> Welcome {{a}}
+    </div>
+    <div>
+        Property and Event binding<br />
+        <input [value]="b" (keyup)="readDataFromTemplateForB(x.value)" #x /> Welcome {{b}}
+    </div>
+    <div>
+        Two-Way binding<br />
+        <input [(ngModel)]="c" /> Welcome {{c}}
+    </div>
+</div>

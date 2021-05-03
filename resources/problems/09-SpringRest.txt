@@ -1,0 +1,40 @@
+# Write spring rest application
+
+1. User must register - save data(user) - Map<String, User>
+	email*
+		valid email
+	password*
+		must be 5, 13 characters
+		must contain atleast one special character
+	name
+		must not contain numbers
+	gender
+		MALE/FEMALE
+	address
+		min characters - 10
+		
+	Do not send registered user in response but use status -> 201
+		
+	Flexible: to return messages
+	
+2. Only registered users can login.
+	username (not a mail id)
+	password
+
+
+3. After login
+	If user is Valid -> {success: true, message: welcome username} - status -> 200
+	If user is invalid -> {success: false, message: This username is not found in our database} - status -> 400
+	If user is invalid -> {success: false, message: Password not matched} - status -> 400
+	If user is invalid -> {success: false, message: Valid username and password must be used} - status -> 400
+	
+	
+=========================	
+
+For database use map or file
+
+=========================	
+
+Use postman to test resources
+
+

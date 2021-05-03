@@ -1,0 +1,12 @@
+<div id="appContainer">
+    <input [(ngModel)]="name"/> {{name}}<br/>
+    <br/>
+    <div id="ld">
+        <app-child [name]="name" [min]="'2'"></app-child>       
+    </div>
+    <div id="rd">
+        <app-child [name]="name" [min]="'4'"></app-child>
+    </div>
+    <div class="clear"></div>
+
+</div>

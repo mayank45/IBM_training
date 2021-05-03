@@ -1,0 +1,123 @@
+var a = 6;	// number
+var a = 6.4;	// number
+var a = "arun"	// string
+var a = true	// boolean
+var a = {}	// object
+var a;		// undefined
+
+data type will be decided by the data
+
+---------------------------------
+
+
+class Student{
+    constructor(n,a){
+        this.name = n;
+        this.age = a;
+    }
+
+    show(){
+        console.log("Student's name is "+this.name+" and age is "+this.age);
+    }
+}
+
+var s = new Student();
+var s = new Student("miley", 33);
+var s = new Student("miley", 33, 123);
+
+
+JSON - 
+var s = {name: "miley", 36}
+var s = {}
+
+
+----------------------------------------
+
+Object
+JS Object
+{'name': "arun", age: 38, address: "india"}
+
+JSON - 
+
+{"name": "arun", "age": 38, "address": "india"}
+
+--------------
+
+JSON --> Document
+
+
+---------------------------
+
+function add(a, b){
+	return a+b;
+}
+
+var sum = function(a, b){
+	return a+b;
+}
+
+var sub = function(a, b){
+	return a-b;
+}
+
+
+
+
+
+
+-------------------------------------------
+
+var print = function(data){
+    // to print
+    console.log("--------------------");
+    console.log(data);
+    console.log("--------------------");
+}
+
+var deleteData = function(data){
+    // to print
+    console.log("--------------------");
+    console.log("deleting: "+ data);
+    console.log("--------------------");
+}
+
+
+-----------------------------
+
+
+// readFile
+var readFile = function(path, c){
+
+	try{
+		console.log("reading path: "+path);
+		// try to open that path
+		var someData = "abcdef";
+		c(someData);
+		// close file
+	} catch(e){
+		console.log("error");
+	}
+	
+}
+
+
+readFile("/home/arun/download/abc.txt", print);
+readFile("/home/arun/download/abc.txt", deleteData);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

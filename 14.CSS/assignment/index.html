@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice Page</title>
+
+    <style>
+        body{
+            background-color: aqua;
+        }
+        #container{
+            width: 60%;
+            margin: 10px auto;
+        }
+        header, footer, section, aside, article, div{
+            /* border: 1px solid black; */
+            box-sizing: border-box;
+        }
+
+        section#main{
+            float: left;
+            width: 70%;
+            padding-right: 10px;
+        }
+        #rightBar{
+            float: left;
+            width: 30%;
+            background: cornflowerblue;
+        }
+        /* footer{
+            clear: both;
+        } */
+
+        #menu>div{
+            width: 50%;
+            float: left;
+        }
+        #menu>div>h1{
+            margin: 0px;
+            padding: 0px;
+        }
+        .clear{
+            clear: both;
+        }
+
+        #banner{
+            background-image: url("./images/banner.jpg");
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            height: 100px;
+        }
+        hr.seperator{
+            margin-top: 10px;
+            margin-bottom: 10px;
+            border: 2px solid rgba(0, 0, 0, 0.287);
+        }
+
+        #galaryBtn{
+            border-radius: 5px;
+            background-color: white;
+            color: gray;
+            border-color: rgba(255, 0, 0, 0.52);
+        }
+        #main>p, #rightBar>p{
+            text-align: justify;
+        }
+        aside#rightBar{
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgb(204, 202, 202);
+            padding-left: 10px;
+        }
+        #profilePic{
+            width: 60%;
+            margin: 10px auto;
+        }
+        #profilePic>img{
+            width: 100%;
+        }
+        footer{
+            border-width: 2px 0;
+            border-color: gainsboro;
+            border-style: solid;
+        }
+        footer > .col{
+            float: left;
+            width: 33%;
+        }
+
+    </style>
+
+</head>
+<body>
+    <div id="container">
+        <header>
+            <div id="menu">
+                <div><h1>Travel diarie</h1></div>
+                <div>
+                    <a href="">HOME</a>
+                    <a href="">BLOG</a>
+                    <a href="">RESUME</a>
+                    <a href="">CONTACT</a>
+                </div>
+    
+            </div>
+            <div class="clear"></div>
+            <hr class="seperator"/>
+            <div id="banner">
+                <p>Reflections on my holiday in the United States...</p>
+                <button id="galaryBtn">Image Gallary</button>
+            </div>
+        </header>
+        <section id="main">
+            <h1>I'M A GREAT TRAVELLER</h1>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat eius sed amet commodi minus! Ut illo non porro incidunt possimus, provident commodi soluta! Quidem pariatur omnis quod exercitationem placeat at!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique dignissimos quibusdam et, doloribus dicta repellat ab deleniti voluptatibus eum voluptatum dolore iusto commodi corrupti aliquam magni accusantium. Tempore, quibusdam labore.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis nisi, nulla cumque aut quam alias consectetur repellendus, libero corrupti, deleniti omnis quidem ipsum itaque laudantium repellat voluptas expedita officiis. Ipsa?</p>
+        </section>
+        <aside id="rightBar">
+            <h5>ABOUT THE AUTHOR</h5>
+            <div id="profilePic">
+                <img src="https://picsum.photos/200"/>
+            </div>
+            <p>My name is Arun. I am 34 years old.</p>
+            <p>I give trainings on Js, jquery, angularjs, nodejs, reactjs, etc...</p>
+        </aside>
+        <footer class="clear">
+            <div class="col">
+                <h5>MY LAST TWEET</h5>
+                <p>Awesome Day for Training! 24Mar2021 02:00 PM</p>
+            </div>
+            <div class="col">
+                <h5>MY PLACES</h5>
+                <p>some image</p>
+            </div>
+            <div class="col">
+                <h5>MY FRIENDS</h5>
+                <p>some friends name</p>
+            </div>
+            <div class="clear"></div>
+        </footer>
+    </div>
+
+</body>
+</html>

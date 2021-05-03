@@ -1,0 +1,27 @@
+<div class="table-responsive">
+    <h2 class="text-center text-primary">All Books</h2>
+    <table class="table">
+        <tr>
+            <th>Id</th>
+            <th>Title</th>
+            <th>Author</th>
+            <th>Price</th>
+            <th>Publisher</th>
+            <th>PublishedDate</th>
+            <th>SN</th>
+            <th>Edit</th>
+            <th>Delete</th>
+        </tr>
+        <tr *ngFor="let book of bookService.books">
+            <td>{{book.id}}</td>
+            <td>{{book.title}}</td>
+            <td>{{book.author}}</td>
+            <td>{{book.price}}</td>
+            <td>{{book.publisher}}</td>
+            <td>{{book.publishedDate|date:'dd/MM/yyyy'}}</td>
+            <td>{{book.sn}}</td>
+            <td><a [routerLink]="['/','edit', book.id]" class="btn btn-warning">Edit</a></td>
+            <td><button class="btn btn-danger" (click)="deleteBook(book)">Delete</button></td>
+        </tr>
+    </table>
+</div>

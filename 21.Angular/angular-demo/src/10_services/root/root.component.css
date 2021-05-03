@@ -1,0 +1,9 @@
+.col-sm{
+    border: 2px solid black;
+}
+
+
+.row{
+    border: 2px solid red;
+    padding: 5px;
+}

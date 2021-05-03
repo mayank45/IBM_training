@@ -1,0 +1,69 @@
+<h1 class="text-center">Create new book</h1>
+
+<div class="container">
+    <form (ngSubmit)="create()" [formGroup]="bookForm" >
+
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label">Title</label>
+            <div class="col-sm-10">
+              <input formControlName="title" class="form-control" />
+              <small *ngIf="bookForm.get('title').dirty && bookForm.get('title').invalid" class="form-text text-danger">Title is required</small>
+            </div>
+          </div>
+  
+          <div class="form-group row">
+            <label class="col-sm-2 col-form-label">Author</label>
+            <div class="col-sm-10">
+              <input formControlName="author" class="form-control" />
+              <small *ngIf="bookForm.get('author').dirty && bookForm.get('author').invalid" class="form-text text-danger">author is required</small>
+            </div>
+          </div>
+  
+          <div class="form-group row">
+            <label class="col-sm-2 col-form-label">Price</label>
+            <div class="col-sm-10">
+              <input formControlName="price" class="form-control" />
+              <small *ngIf="bookForm.get('price').dirty && bookForm.get('price').invalid" class="form-text text-danger">price is required</small>
+            </div>
+          </div>
+  
+          <div class="form-group row">
+            <label class="col-sm-2 col-form-label">Publisher</label>
+            <div class="col-sm-10">
+              <input formControlName="publisher" class="form-control" />
+              <small *ngIf="bookForm.get('publisher').dirty && bookForm.get('publisher').invalid" class="form-text text-danger">publisher is required</small>
+            </div>
+          </div>
+  
+          <div class="form-group row">
+            <label class="col-sm-2 col-form-label">PublishedDate</label>
+            <div class="col-sm-10">
+              <input formControlName="publishedDate" class="form-control" />
+              <small *ngIf="bookForm.get('publishedDate').dirty && bookForm.get('publishedDate').invalid" class="form-text text-danger">publishedDate is required</small>
+            </div>
+          </div>
+  
+          <div class="form-group row">
+            <label class="col-sm-2 col-form-label">SN</label>
+            <div class="col-sm-10">
+              <input formControlName="sn" class="form-control" />
+              <small *ngIf="bookForm.get('sn').dirty && bookForm.get('sn').invalid" class="form-text text-danger">SN is required</small>
+            </div>
+          </div>
+  
+    
+
+        <!-- 
+            author
+        price
+        publisher
+        publishedDate
+        sn
+   -->
+          <div class="form-group row">
+            <div class="col-sm-5 offset-sm-7">
+                <button type="submit" [disabled]="bookForm.invalid" class="btn btn-primary btn-block">Create Book</button>
+            </div>
+        </div>
+      </form>
+</div>

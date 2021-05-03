@@ -1,0 +1,56 @@
+Environment variable
+JAVA_HOME => jdk path
+
+https://maven.apache.org/download.cgi
+https://mirrors.estointernet.in/apache/maven/maven-3/3.6.3/binaries/apache-maven-3.6.3-bin.zip
+MAVEN_HOME => maven path
+
+add new path in PATH
+maven path/bin
+
+
+
+1. Create maven project
+2. Simple project (check)
+3. groupId -> unique (package)
+   artifactId -> projectName
+4. package must be jar
+5. create project 
+
+pom.xml
+	add dependencies
+	<project>
+		<dependencies>
+			<dependency>
+				// ...
+			</dependency>
+		</dependencies>
+	</project>
+
+Work in the project
+
+Phases
+--------
+verify: verify syntax in pom.xml
+clean: used to clear target
+compile: for compilation -> compiler is required -> jdk
+	properties -> build path -> library -> add library -> JRE system library -> add -> standard vm -> directory/location
+	
+test: used to test all test cases
+package: to build
+
+
+install: compile, test, pakcage
+
+
+checkout
+	git "url"
+
+compile
+	mvn compile
+	
+build
+	mvn package
+
+test
+	mvn test

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>Demo</div>
+    <script>
+        var element = document.getElementsByTagName('div')[0];
+
+        element.style.width = "100px"
+        element.style.height = "100px"
+        element.style.border = "2px solid red"
+        element.style["margin-top"] = "100px"
+        element.style.background = "darkseagreen"
+
+        let xAng = 0;
+        let yAng = 0;
+        setInterval(() => {
+            xAng++;
+            yAng++;
+            // element.style.transform = "translate(200px) skew("+xAng+"deg, "+yAng+"deg)"
+            // element.style.transform = "translate(200px) rotateX("+xAng+"deg)"
+            // element.style.transform = "translate(200px) rotateY("+yAng+"deg)"
+            element.style.transform = "translate(200px) rotateX("+xAng+"deg) rotateY("+yAng+"deg) rotateZ("+yAng+"deg)"
+            if(xAng > 360){
+                xAng = 0;
+            }
+            if(yAng > 360){
+                yAng = 0;
+            }
+        }, 100);
+
+
+
+        // element.setAttribute("style", "color:blue")
+    </script>
+</body>
+</html>

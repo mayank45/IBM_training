@@ -1,0 +1,5 @@
+<button (click)="flag=!flag">Show <sapn *ngIf="!flag">Template Driven</sapn> <sapn *ngIf="flag">Reactive</sapn> Form</button>
+
+
+<app-template-driven-form *ngIf="flag"></app-template-driven-form>
+<app-reactive-form *ngIf="!flag"></app-reactive-form>

@@ -1,0 +1,6 @@
+1. Java code is in resources. Save java code in src/main/java directory
+2. Form is sending get request
+
+Spring project
+--------------
+1. web.xml is not valid

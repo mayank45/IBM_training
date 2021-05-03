@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+/*
+        function readFile(p, c) {
+            // reading file where path is given as p
+            c(data)
+        }
+
+        function closeFile(p, c) {
+            // reading file where path is given as p
+            c(true)
+        }
+
+        readFile("path", function (data) {
+            ///
+            var a = 5;
+            closeFile("path", function (isError) {
+                /// 
+                deletFile("path", function(isError){
+                    var c = 5;
+                    //
+
+                    // a, b, c
+                })
+            })
+        })
+        */
+       function readFile(p){
+           return new Promise((resolve, reject)=>{
+               //time taken activity
+            if(p !== "path"){
+                return reject("Given path is invalid");
+            } else {
+                return resolve("this is text form file")
+            }
+           })
+       }
+
+       readFile("pathsdf")
+       .then(function(data){
+        console.log(data);
+       }).then(function(){
+           console.log("closing the file")
+           var a = 5;
+       }).then(function(){
+           console.log("delete file")
+           var b =45;
+       }).catch(function(err){
+           console.log(err)
+       })
+
+
+
+    </script>
+</body>
+
+</html>

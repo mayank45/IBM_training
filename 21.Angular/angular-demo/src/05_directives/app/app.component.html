@@ -1,0 +1,27 @@
+<button (click)="toggle()">Toggle: {{isPresent}}</button>
+<h4>Attribute directives</h4>
+<ul>
+    <!--
+        <li class="valid">Java in 21 days</li>
+    <li class="invalid">HTML in 21 days</li> 
+-->
+     <li [ngClass]="myCssClass">Angular in 21 days</li>
+    <li [ngClass]="{'valid':isPresent, 'invalid':!isPresent}">Python in 21 days</li>
+    <li>...</li>
+    <li [ngStyle]="{'color': myColor, 'border': myBorder}">.Net in 21 days</li>
+    <li [ngStyle]="!isPresent?{'color': myColor, 'border': myBorder}:{}">Node in 21 days</li> 
+</ul>
+
+<h4>Structural directives</h4>
+<p>This is visible because isPresent is <mark><span *ngIf="isPresent">Valid</span> <span *ngIf="!isPresent">Invalid</span></mark></p>
+
+<p>This is visible because isPresent is <mark>{{isPresent}}</mark></p>
+
+
+<hr/>
+
+<ol>
+    <li *ngFor="let hobby of hobbies">
+        {{hobby}}
+    </li>
+</ol>

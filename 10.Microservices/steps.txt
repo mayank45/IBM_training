@@ -1,0 +1,80 @@
+1. Download/create eureka-server
+	Eureka Server
+
+2. Download/create zuul server
+	Zuul
+	Eureka Discovery Client
+
+3. All microservice (including zuul server), must be registered on eureka-server
+	Eureka Discovery Client
+	Spring Web
+	Data-Jpa/data-mongodb
+	dev-tools
+
+	start.spring.io
+	
+4. Start Eureka server
+	server.port= 8761
+	spring.application.name= eureka-service
+	eureka.client.register-with-eureka= false
+	fetch-registry= false
+
+	
+	@SpringBootApplication -> @EnableEurekaServer
+
+	browser=> localhsot:8761
+	
+5. Start Zuul
+	spring.application.name= api-gateway
+	server.port= 8080
+	#routes.products.path= "/api/**"
+	
+	@SpringBootApplication -> @EnableEurekaClient and @EnableZuulProxy
+	
+6. Start eureka Client or Microservice
+	spring.application.name= service-name
+	server.port= 0
+
+	@SpringBootApplication -> @EnableEurekaClient
+
+
+7. RestTemplate
+	main class
+	
+	@Bean 
+	@LoadBalanced
+	public RestTemplate getRestTemplate(){
+		new RestTemplate();
+	}
+	
+8. BookMyShow
+	@GetMapping("findAllMovies")
+	public List<Movie> getMovies(){
+		String url = "http://service-name/movies";
+		ResponseEntity<List<Movie>> response = restTemplate.exchange(url, method, data, new ParameterizedTypeReferenceList<Movie>(){});
+		return response.getBody();
+	}
+
+
+---------------------------
+
+9. Hystrix 
+	add starter hystrix dependency
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-netflix-hystrix</artifactId>
+		</dependency>
+	
+	@EnableCircuitBreaker -> main method class
+	
+	
+	-> fallback(method) -> @HystrixCommand -> configure
+	
+	@HystrixCommand(fallbackMethod = "findMoviesFallback",
+		commandProperties = {
+			@HystrixProperty(name="execution.isolation.thread.timeoutInMilliseconds",value = "2000"),
+			@HystrixProperty(name="circuitBreaker.requestVolumeThreshold",value = "10"),
+			@HystrixProperty(name="circuitBreaker.errorThresholdPercentage",value = "90"),
+			@HystrixProperty(name="circuitBreaker.sleepWindowInMilliseconds",value = "5000")
+		}
+	)
